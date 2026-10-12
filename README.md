@@ -60,3 +60,7 @@ dsa/
 CS Dojo, NeetCode, VisuAlgo, LeetCode.
 
 Older LeetCode solutions (sorted by difficulty) are in [leetcode-solutions](https://github.com/ibrahim787898m/leetcode-solutions).
+
+## About the notes
+
+Concept notes are the lesson material from my study sessions with Claude, kept as a quick reference. Quiz answers, traces and practice code are my own work.

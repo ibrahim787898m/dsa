@@ -103,29 +103,96 @@ def insert_after(head, tail, node, data):
 #     node.next.prev = node.prev
 #     return head, tail
 
+def reverse_doubly(head, tail):
+    current = head
+    if head is tail:
+        return head, tail
+
+    if current.next.next is tail:
+        head, tail = tail, head
+
+    # while current is not None:
+    #     next_node = current.next
+    #     prev_node = current.prev
+    #     current.prev = next_node
+    #     current.next = prev_node
+    #     current = next_node
+
+    # head, tail = tail, head
+
+    return head, tail    
+    
+
+    
+
+# empty list test
+# head, tail = None, None
+# head, tail = reverse_doubly(head, tail)
+# print_forward(head)
+# print_backward(tail)
+# print(check(head, tail))
+
+# single node test
+# s = DNode(5)
+# head, tail = s, s
+# head, tail = reverse_doubly(head, tail)
+# print_forward(head)
+# print_backward(tail)
+# print(check(head, tail))
+
+# three node
+# a, b, c = DNode(1), DNode(2), DNode(3)
+# a.next = b
+# b.prev = a
+# b.next = c
+# c.prev = b
+# head, tail = a, c
+# head, tail = reverse_doubly(head, tail)
+# print(head.data)
+# print(tail.data)
+# print_forward(head)
+# print_backward(tail)
+# print(check(head, tail))
+
+# more than 3 node
+# a, b, c, d = DNode(1), DNode(2), DNode(3), DNode(4)
+# a.next = b
+# b.prev = a
+# b.next = c
+# c.prev = b
+# c.next = d
+# d.prev = c
+# head, tail = a, d
+# head, tail = reverse_doubly(head, tail)
+# print(head.data)
+# print(tail.data)
+# print_forward(head)
+# print_backward(tail)
+# print(check(head, tail))
+
 
 
 #single node
-s = DNode(5)
+# s = DNode(5)
 #
 ##node is tail
-a, b, c = DNode(1), DNode(2), DNode(3)
-a.next = b
-b.prev = a
-b.next = c
-c.prev = b
+# a, b, c = DNode(1), DNode(2), DNode(3)
+# a.next = b
+# b.prev = a
+# b.next = c
+# c.prev = b
 #
 #
-head, tail = s, s
+# head, tail = s, s
 
-head, tail = delete_node(head, tail, s)
+# head, tail = delete_node(head, tail, s)
 
 # head, tail = insert_after(head, tail, c, 4)
 
-print_forward(head)
-print_backward(tail)
+# print_forward(head)
+# print_backward(tail)
 
-print(check(head, tail))
+# print(check(head, tail))
 
 
 

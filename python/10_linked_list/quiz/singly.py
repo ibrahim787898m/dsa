@@ -173,14 +173,78 @@ def reverse(head):
 
     return prev
 
-#head = None
-head = Node(1)
-#head.next = Node(2)
-#head.next.next = Node(3)
+def reverse_singly(head):
+    prev_node = None
+    current = head
 
+    while current is not None:
+        copied_node = current.next
+        current.next = prev_node
+        prev_node = current
+        current = copied_node
+
+    return prev_node
+
+
+def reversed_copy(head):
+    new_head = None
+    current = head
+
+    while current is not None:
+        new_node = Node(current.data)
+        new_node.next = new_head
+        new_head = new_node
+        current = current.next
+
+    return new_head
+
+def is_palindrome(head):
+    new_head = reversed_copy(head)
+    current1 = head
+    current2 = new_head
+
+    while current1 is not None and current2 is not None:
+        if current1.data != current2.data:
+            return False
+        current1 = current1.next
+        current2 = current2.next
+
+    return True
+
+
+# three node
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = Node(2)
+head.next.next.next.next = Node(1)
+
+new = reversed_copy(head)
+print_list(new)
 print_list(head)
-head = reverse(head)
-print_list(head)
+print(is_palindrome(head))
+
+
+# empty list
+# head = None
+
+# single node
+# head = Node(1)
+
+# double node
+# head = Node(1)
+# head.next = Node(2)
+
+# 1 -> 2 -> 3 -> 4 -> 5
+# head = Node(1)
+# head.next = Node(2)
+# head.next.next = Node(3)
+# head.next.next.next = Node(4)
+# head.next.next.next.next = Node(5)
+
+# run the func and print the list
+# head = reverse_singly(head)
+# print_list(head)
 
 #
 #head, tail = None, None

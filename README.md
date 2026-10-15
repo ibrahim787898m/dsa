@@ -12,7 +12,7 @@ Each topic folder holds my notes, the questions I practice, my answers (traces, 
 | 5–6   | Arrays & strings, two pointer technique              | [`05_arrays_strings_two_pointers`](python/05_arrays_strings_two_pointers) | Done        |
 | 7–8   | Sliding window, string manipulation                  | [`07_sliding_window_string`](python/07_sliding_window_string)             | Done        |
 | 9     | Binary search                                        | [`09_binary_search`](python/09_binary_search)                             | Done        |
-| 10    | Linked lists                                         | [`10_linked_list`](python/10_linked_list)                                 | In progress |
+| 10    | Linked lists                                         | [`10_linked_list`](python/10_linked_list)                                 | Done        |
 | 11    | Reversal                                             |                                                                           | Not started |
 | 12    | Fast and slow pointer                                |                                                                           | Not started |
 | 13    | Cycle detection                                      |                                                                           | Not started |
